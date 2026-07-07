@@ -11,6 +11,13 @@ app.use("/test", (req, res) => {
     res.send("Hello from the server!");
 });
 
+app.get("/ab*c",(req,res)=>{
+    res.send("Testing routing");
+})
+app.get(/a/,(req,res)=>{
+    res.send("Testing Regex in routing");
+})
+
 app.get("/user", (req,res) => {
     res.send({ first_name: "Danyal", last_name: "Haider" });
 });
